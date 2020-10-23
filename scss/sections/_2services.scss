@@ -1,0 +1,70 @@
+.bg__services{
+    background-color: $topaz-color;
+}
+.section__header{
+    max-width: 645px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.section__title{
+    position: relative;
+    font-size: $primary-size+24px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include mq('phone'){
+        font-size: $primary-size+12px;
+        padding-top: 8px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left:50%;
+        opacity: 15%;
+        width: 87px;
+        height: 4px;
+        background-color: #000;
+        transform: translate(-50%, -50%);
+    }
+  
+}
+.section__subtitle{
+    font-size: $primary-size+2px;
+
+    @include mq('phone'){
+        font-size: $primary-size;
+        padding-top: 8px;
+    }
+    &>a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+}
+
+.services{
+    @extend %style-services;
+    &__item{
+        @extend %style-item;
+    }
+    &__icon{
+        @extend %style-icon;
+        filter: sepia(0);
+        transition: transform 1s;
+        &:hover{
+            filter: sepia(80%);
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+    &__title{
+        @extend %style-title;
+       
+
+    }
+    &__text{
+        @extend %style-text;
+    }
+}

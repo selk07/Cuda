@@ -1,0 +1,101 @@
+.bg__portfolio{
+    background-color: $lightorange-color;
+    color: #393939;
+}
+
+.tab{
+    width: 100%;
+    margin: 42px auto;
+    text-align: center;
+   
+    @include mq('phone'){
+        width: 100%;
+    }
+    @include mq('phone-small'){
+        width: 73%;
+    }
+    &__list{
+        list-style: none;
+        padding: 0; 
+    }
+    &__item{
+        display: inline-block;
+        padding: 5px 20px;
+        background-color: rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        margin-left: 10px;
+        transition: all 0.5s;
+
+        @include mq('phone'){
+            width: 90px;
+            margin: 5px;
+        }
+
+        &>a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #393939;
+            font-size: $primary-size+2;
+        }
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+        &:active{
+            background-color:#fff;
+        }
+    }
+    .active__item{
+        background-color: #fff;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+       &:active{
+        background-color:#fff;
+       }
+    }
+}
+
+.portfolio{
+    @extend %style-services;
+    margin-top: 62px;
+   
+    &__item{
+        @extend %style-item;
+        flex-basis: 45%;
+        margin-bottom: 62px;
+        transition:  all 0.7s;
+
+        &:hover {
+            transform: scale(0.8);
+            cursor: pointer;
+        }
+        @include mq('phone'){
+            flex-basis:500px;
+            margin-bottom: 40px;
+        }
+    }
+    &__img{
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        @include mq('phone'){
+            width: 250px;
+            height: 150px;
+        }
+        &>img{
+        max-width: 100%;
+        }
+    }
+    &__title{
+       text-transform: uppercase;
+       font-size: $primary-size+2;
+    }
+  
+}
+
+.row{
+    margin: 20px 0;
+    text-align: center;
+}

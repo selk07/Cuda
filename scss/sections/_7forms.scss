@@ -1,0 +1,112 @@
+
+.bg__form{
+    background-color: $blue-color;
+}
+.width__section{
+    max-width: 790px;
+}
+.wraper__form{
+    max-width: 865px;
+    margin: 0 auto;
+    margin-top: 76px;
+    text-align: center;
+    color: #ffffff;
+
+    @include mq('tablet'){
+        width: 80%;
+    }
+
+    @include mq('phone'){
+        width: 90%;
+        margin-top: 36px;
+    }
+    .wraper__input{
+        width: 100%;
+        overflow: auto;
+
+        ::-webkit-input-placeholder{
+            font-family: 'Titillium Web', sans-serif;
+            color: #fff;
+            font-size: $primary-size;
+            opacity: 1;
+        }
+        ::-moz-placeholder{
+            font-family: 'Titillium Web', sans-serif;
+            color: #fff;
+            font-size: $primary-size;
+            opacity: 1;
+        }
+        :-moz-placeholder{
+            font-family: 'Titillium Web', sans-serif;
+            color: #fff;
+            font-size: $primary-size;
+            opacity: 1;
+        }
+        :-ms-input-placeholder{
+            font-family: 'Titillium Web', sans-serif;
+            color: #fff;
+            font-size: $primary-size;
+            opacity: 1;
+        }
+    }
+    textarea::placeholder {
+        font-family: 'Titillium Web', sans-serif;
+        color: #fff;
+        font-size: $primary-size;
+        opacity: 1;
+    }
+
+    .form__name {    
+        @extend %style-input;
+        margin-right: 32px;
+
+        @include mq('tablet'){
+            margin-right: 0;
+        }
+        @include mq('phone'){
+           margin-right: 0;
+           height: 25px;
+           margin-bottom: 15px;
+        }
+    }
+    .form__email{
+        @extend %style-input;
+       
+        @include mq('phone'){
+            margin-right: 0;
+            height: 25px;
+         }
+    }
+    
+    .form__message{
+        width: 100%;
+        height: 200px;
+        font-family: 'Titillium Web', sans-serif;
+        color: #fff;
+        opacity: 1;
+        font-size: $primary-size;
+        border-radius: 4px;
+        padding: 15px 25px;
+        border: 1px solid #273a71;
+        background-color: #273a71;
+        color: #ffffff;
+        overflow: auto;
+        margin-bottom: 58px;
+
+        @include mq('tablet'){
+           width: 75%;
+        }
+
+        @include mq('phone'){
+            width: 100%;
+            height: 150px;
+            margin-bottom: 25px;
+        }
+        
+        &:hover, &:focus-within{
+            border: 2px solid #d1dcff;
+            outline: none;
+            
+        }
+    }
+}

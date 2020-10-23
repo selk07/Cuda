@@ -1,0 +1,19 @@
+// Utils 
+@import 'utils/index';
+
+body{   
+    font-family: 'Titillium Web', sans-serif;
+    font-size: $primary-size;
+    color: $primary-color;
+    margin: 0;
+  
+}
+
+*,*:after,*:before
+	{
+	box-sizing: border-box;
+    }
+//Components
+@import 'components/index';
+// Sections
+@import 'sections/index';

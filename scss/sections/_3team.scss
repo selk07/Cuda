@@ -1,0 +1,81 @@
+.bg__team{
+    background-color: $light-color;
+    color: $second-color;
+}
+
+
+.team{
+    @extend %style-services;
+  
+    &__item{
+        @extend %style-item;      
+    }
+    &__img{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: #878787;
+        overflow: hidden;
+        
+   
+        &>.icon{
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            filter: sepia(0);
+            transition: transform 1s;
+            &:hover{
+                filter: sepia(80%);
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+    }
+    &__title{
+        @extend %style-title;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    &__position{
+        @extend %style-position;
+        margin-top: 0;
+    }
+    &__text{
+        @extend %style-text;
+       
+    }
+  
+    &__social{
+        width: 100%;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        margin: 0;
+       
+            &>.social__item{     
+                display: inline-block;
+                margin-right: 12px;  
+                width: 32px;
+                height: 32px;
+                font-size: $primary-size;
+                text-decoration: none;         
+                border-radius: 50%;
+                background-color: #bdd1df;
+                &:last-child{
+                    margin-right: 0;
+                }
+          
+                & i{
+                    color: #fff;
+                    padding-top: 8px;
+                    transition: all 0.5s;
+                }
+    
+                &:hover{
+                    transform: translateY(-5px);      
+                    text-shadow: 1px 2px 3px #000; 
+                }
+            }
+    }
+}

@@ -1,0 +1,40 @@
+.footer{
+    width: 100%;
+    background-color: $darkblue-color;
+    font-size: $primary-size+8;
+    padding: 45px 0;
+   
+    @include mq('phone'){
+        padding: 25px 0;
+        font-size: $primary-size;
+    }
+ 
+    .social{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        &__item{
+            display: inline-block;
+            padding: 5px 30px;
+
+            @include mq('phone'){
+                padding: 5px 15px;
+            }
+        
+            &>a{
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s;
+                &:hover, &:visited{
+                    color:#30bae7;
+                }
+            }
+        }
+    }
+}
+
+
+   

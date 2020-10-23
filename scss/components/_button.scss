@@ -1,0 +1,47 @@
+
+.button{
+   @extend %style-button;
+   background-color: $orange-color;
+
+   &:hover{
+    background-color: #e26125;
+    cursor: pointer;
+    }
+    &:active{
+    box-shadow: 0 3px#f06626ce,
+                0 1px 6px rgba(0,0,0,.6);
+    transform: translateY(4px);
+    } 
+}
+
+.bgc__topaz{
+    background-color: $topaz-color;
+    box-shadow: 0 6px #108d76;
+
+    &:hover{
+        background-color: #3a9986;
+        cursor: pointer;
+    }
+        &:active{
+        box-shadow: 0 3px #2c7466,
+                    0 1px 6px rgba(0,0,0,.6);
+        transform: translateY(4px);
+    }
+}
+
+
+.bgc__lightblue{
+    background-color: $lightblue-color;
+    box-shadow: 0 6px #258daf;
+    margin-bottom: 25px;
+    
+    &:hover{
+        background-color:#40a1c2;
+        cursor: pointer;
+    }
+        &:active{
+            box-shadow: 0 3px #196e8a,
+                        0 1px 6px rgba(0,0,0,.6);
+            transform: translateY(4px);    
+    }
+}

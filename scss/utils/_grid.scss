@@ -1,0 +1,10 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include mq('phone'){
+        padding: 0 10px;
+    }
+}
+

@@ -1,0 +1,122 @@
+
+//Color and size
+$primary-color:#fff;
+$second-color:#3c4761;
+$primary-size:16px;
+
+//Section color
+$purple-color:#87509c;
+$topaz-color:#17c2a4;
+$light-color:#e7f1f8;
+$white-color: #fff;
+$lightorange-color:#ffdd99;
+$rose-color:#d74680;
+$blue-color:#3c5499;
+$darkblue-color:#344b8e;
+
+// Button color
+$orange-color:#eb7d4b;
+$lightblue-color:#30bae7;
+
+
+// Style button
+%style-button{
+    display: inline-block;
+    width: 290px;
+    height: 70px;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-size: $primary-size+2;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #da6a36ce;
+    transition: background-color 0.2s linear;
+    
+    @include mq('phone'){
+        width: 160px;
+        height: 50px;
+        font-size: $primary-size - 2px;
+      }
+}
+
+//Flex colums style
+%style-services{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 80px;
+    
+    @include mq('phone'){
+        margin-top: 40px;
+    }
+}
+
+%style-item{
+    flex-basis: 200px;
+    text-align: center;
+    
+    @include mq('tablet'){
+        flex-basis: 330px;
+        margin-bottom: 50px;
+    }
+    @include mq('phone'){
+        flex-basis: 500px;
+        margin-bottom: 40px;
+    }
+}
+
+%style-icon{
+    max-width: 100%;
+    height: 130px;
+  
+}
+
+%style-position{
+    font-size: inherit;
+    color: #30bae7;
+}
+
+%style-title{
+    font-size: $primary-size+8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 30px;
+
+    @include mq('phone'){
+        padding-top: 15px;
+        font-size: $primary-size+5px;
+      }
+}
+%style-text{
+    font-size: inherit;
+
+    @include mq('phone'){
+        padding: 0;
+     }
+}
+
+
+//Style input
+%style-input {
+    display: inline-block;
+    width: 414px;
+    height: 56px;
+    padding: 15px 25px;
+    margin-bottom: 27px;
+    border-radius: 4px;
+    outline: none;
+
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    font-size: $primary-size;
+    color: $primary-color;
+   
+   border: 1px solid #273a71;
+   background-color: #273a71;
+    &:hover,&:focus-within{
+        border: 2px solid #d1dcff;
+    }
+}
